@@ -1,0 +1,1 @@
+source jirabotenv/bin/activate
