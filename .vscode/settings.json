@@ -1,4 +1,8 @@
 {
-    "notebook.output.textLineLimit": 200,
-    "notebook.output.scrolling": true
+    "notebook.output.textLineLimit": 50,
+    "notebook.output.scrolling": true,
+    "notebook.consolidatedRunButton": true,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.insertFinalNewline": true,
+    "notebook.stickyScroll.enabled": true
 }
