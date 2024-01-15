@@ -1,4 +1,7 @@
 import argparse
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def main():
     parser = argparse.ArgumentParser(description='JiraBot CLI')
@@ -13,6 +16,7 @@ def main():
             print("...")
         except EOFError:
             break
+    print()
     print("Goodbye!")
 
 if __name__ == '__main__':

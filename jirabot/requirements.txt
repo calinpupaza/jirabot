@@ -1,0 +1,8 @@
+langchain
+langserve
+langchain_openai
+atlassian-python-api
+slack
+slackclient
+slackeventsapi
+python-dotenv
