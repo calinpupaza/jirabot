@@ -25,16 +25,16 @@ cd jirabot
 
 1. Start ngrok and check traffic at http://127.0.0.1:4040
 ```
-ngrok
+ngrok http --domain=actively-beloved-muskrat.ngrok-free.app 3000
 ```  
 
-2. Start slackbot server
+2. Start slackbot server on localhost:3000
 ```
 python slackbot.py
 ```
 
 3. Talk to bot
-on slack
+Say hi on slack
 
 ### CLI
 1. Run bot CLI
