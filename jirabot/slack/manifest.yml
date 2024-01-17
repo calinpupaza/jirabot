@@ -1,0 +1,48 @@
+# https://app.slack.com/app-settings/T06DUT7DE67/A06ECDVGMGR/app-manifest
+
+display_information:
+  name: Jira Bot
+  description: A shorter description.
+  background_color: "#0000AA"
+  long_description: JiraBot - Your interactive smart and reliable project co-planner, that makes your work in Jira much easier. Chat to create, edit, assign, organize and update Jira issues. Bla Bla
+features:
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: true
+    messages_tab_read_only_enabled: false
+  bot_user:
+    display_name: JiraBot
+    always_online: true
+  slash_commands:
+    - command: /jirabot
+      url: https://actively-beloved-muskrat.ngrok-free.app/action
+      description: You see a mailbox in the field.
+      usage_hint: doit
+      should_escape: false
+oauth_config:
+  redirect_urls:
+    - https://actively-beloved-muskrat.ngrok-free.app/auth
+  scopes:
+    user:
+      - im:history
+    bot:
+      - commands
+      - chat:write
+      - chat:write.public
+      - app_mentions:read
+      - im:history
+settings:
+  event_subscriptions:
+    request_url: https://actively-beloved-muskrat.ngrok-free.app/action
+    user_events:
+      - message.app_home
+      - message.im
+    bot_events:
+      - app_mention
+      - message.im
+  interactivity:
+    is_enabled: true
+    request_url: https://actively-beloved-muskrat.ngrok-free.app/action
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
