@@ -6,3 +6,4 @@ slack
 slackclient
 slackeventsapi
 python-dotenv
+cachetools
