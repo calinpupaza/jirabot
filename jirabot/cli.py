@@ -1,15 +1,11 @@
-import argparse
+
 from dotenv import load_dotenv
-from brains.chatbot import setup_jira_agent
+from brains.jiraagent import JiraAgent
 
 load_dotenv()
 
 def main():
-    parser = argparse.ArgumentParser(description='JiraBot CLI')
-    parser.add_argument('-v', '--verbose', action='store_true', help='Enable verbose mode')
-    args = parser.parse_args()
-
-    agent = setup_jira_agent(True)
+    agent = JiraAgent(verbose=True)
 
     print("Enter multiple lines of text (press Ctrl+D to finish):")
     while True:

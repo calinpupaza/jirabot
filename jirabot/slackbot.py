@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from slack import WebClient
 from slackeventsapi import SlackEventAdapter
 
-from brains.chatbot import setup_jira_agent
+from brains.jiraagent import JiraAgent
 
 from multiprocessing import Pool
 
@@ -17,7 +17,7 @@ slack_client = WebClient(token=slack_token)
 slack_signing_secret = os.environ.get("SLACK_SIGNING_SECRET")
 slack_events_adapter = SlackEventAdapter(slack_signing_secret, "/action")
 
-agent = setup_jira_agent(False)
+agent = JiraAgent(False)
 
 # Define event handler for message events
 @slack_events_adapter.on("message")
